@@ -1,0 +1,34 @@
+/* Bulma Columns */
+@import '~bulma/sass/utilities/_all.sass';
+@import '~bulma/sass/grid/columns';
+
+/* Mixins and Variables */
+@import 'mixins';
+@import 'variables';
+
+/* Body */
+
+body {
+  background-color: $body-bg;
+  padding: 0;
+  margin: 0;
+}
+
+/* Fonts */
+
+* {
+  font-family: $font-family;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  // font-size: 1rem;
+  color: $text-color;
+  a {
+    text-decoration: none;
+  }
+}
+
+/* Headings Reset */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  color: $gray;
+}
