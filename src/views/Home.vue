@@ -10,20 +10,23 @@
       img.hospital(src="@/assets/img/hospital.svg")
     router-link(to="/about")
       img.outdoor(src="@/assets/img/outdoor.svg")
-    router-link(to="/about", alt="Biblioteca")
+    router-link(to="/biblioteca", alt="Biblioteca")
       img.biblioteca(src="@/assets/img/biblioteca.svg")
     router-link(to="/about")
       img.lady-child(src="@/assets/img/lady_child.svg")
-    router-link(to="/about")
+    router-link(to="/aborto-no-mundo")
       img.mapa(src="@/assets/img/mapa.svg")
     router-link(to="/about")
       img.legislacao(src="@/assets/img/man_suit_coffee.svg")
     router-link(to="/about")
       img.quemsomos(src="@/assets/img/quem_somos.svg")
     router-link(to="/about")
+      img.headphones(src="@/assets/img/man_headphone.svg")
+    a(href="https://facebook.com/luziasdoc", target="_blank")
       img.facebook(src="@/assets/img/woman_holding_fb.svg")
     img.cenario1(src="@/assets/img/man_handup.svg")
-    img.cenario2(src="@/assets/img/man_preg_lady.svg")
+    router-link(to="/entrevista-etica")
+      img.cenario2(src="@/assets/img/man_preg_lady.svg")
 </template>
 
 <script>
@@ -37,7 +40,9 @@ export default {
     // Some data here
   },
   mounted() {
-    setTimeout(() => { this.animate = false; }, 3500);
+    if (this.animate) {
+      setTimeout(() => { this.animate = false; }, 3000);
+    }
   },
 };
 </script>
@@ -82,6 +87,21 @@ export default {
   width: 24.3vw;
   left: 13.2vw;
   top: 40.9vw;
+  z-index: 10;
+
+  &:hover {
+    transition: all 500ms ease-in-out;
+    transform: scale(1.05);
+    filter: drop-shadow(0 2px 8px rgba(0,0,0,0.25));
+  }
+}
+
+.headphones {
+  position: absolute;
+  height: auto;
+  width: 5.8vw;
+  left: 3.6vw;
+  top: 42vw;
   z-index: 10;
 
   &:hover {
@@ -229,5 +249,11 @@ export default {
     right: 17.9vw;
     bottom: 14vw;
     z-index: 8;
+
+    &:hover {
+      transition: all 500ms ease-in-out;
+      transform: scale(1.1);
+      filter: drop-shadow(0 2px 8px rgba(0,0,0,0.25));
+    }
 }
 </style>
