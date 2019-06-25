@@ -4,23 +4,22 @@
       h2 Navegue pela imagem com o mouse
   .svg-container(:class="{ animating: animate }")
     img.home(src="@/assets/img/home.svg")
-    router-link(to="/about")
+    a(href="https://youtu.be/X0qT1QIfuQI ", target="_blank")
       img.igreja(src="@/assets/img/igreja.svg")
-    router-link(to="/about")
-      img.hospital(src="@/assets/img/hospital.svg")
-    router-link(to="/about")
+    img.hospital(src="@/assets/img/hospital.svg")
+    router-link(to="/depoimentos")
       img.outdoor(src="@/assets/img/outdoor.svg")
     router-link(to="/biblioteca", alt="Biblioteca")
       img.biblioteca(src="@/assets/img/biblioteca.svg")
-    router-link(to="/about")
+    router-link(to="/planejamento-familiar")
       img.lady-child(src="@/assets/img/lady_child.svg")
     router-link(to="/aborto-no-mundo")
       img.mapa(src="@/assets/img/mapa.svg")
-    router-link(to="/about")
+    a(href="https://youtu.be/0sC_uAUYYC4", target="_blank")
       img.legislacao(src="@/assets/img/man_suit_coffee.svg")
-    router-link(to="/about")
+    router-link(to="/quem-somos")
       img.quemsomos(src="@/assets/img/quem_somos.svg")
-    router-link(to="/about")
+    a(href="https://soundcloud.com/luziaspodcast/e-possivel-discutir-o-aborto-sem-falar-de-genero", target="_blank")
       img.headphones(src="@/assets/img/man_headphone.svg")
     a(href="https://facebook.com/luziasdoc", target="_blank")
       img.facebook(src="@/assets/img/woman_holding_fb.svg")
@@ -149,13 +148,6 @@ export default {
     left: 27.6vw;
     top: 18.1vw;
     z-index: 4;
-
-    &:hover {
-      z-index: 5;
-      transition: all 500ms ease-in-out;
-      transform: scale(1.05);
-      filter: drop-shadow(0 2px 8px rgba(0,0,0,0.25));
-    }
 }
 
 .outdoor {

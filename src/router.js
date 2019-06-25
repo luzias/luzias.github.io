@@ -17,7 +17,7 @@ export default new Router({
       component: Home,
     },
     {
-      path: '/about',
+      path: '/quem-somos',
       name: 'about',
       component: () => import('./views/About.vue'),
     },
@@ -25,6 +25,11 @@ export default new Router({
       path: '/biblioteca',
       name: 'biblioteca',
       component: () => import('./views/Biblioteca.vue'),
+    },
+    {
+      path: '/planejamento-familiar',
+      name: 'planejamento',
+      component: () => import('./views/PlanejamentoFamiliar.vue'),
     },
     {
       path: '/entrevista-etica',
@@ -35,6 +40,11 @@ export default new Router({
       path: '/aborto-no-mundo',
       name: 'mapa',
       component: () => import('./views/Mapa.vue'),
+    },
+    {
+      path: '/depoimentos',
+      name: 'luzias',
+      component: () => import('./views/Luzias.vue'),
     },
   ],
 });
