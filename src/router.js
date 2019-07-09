@@ -46,5 +46,20 @@ export default new Router({
       name: 'luzias',
       component: () => import('./views/Luzias.vue'),
     },
+    {
+      path: '/aborto-e-papeis-de-genero',
+      name: 'podcast',
+      component: () => import('./views/Podcast.vue'),
+    },
+    {
+      path: '/legislacao',
+      name: 'legislacao',
+      component: () => import('./views/Legislacao.vue'),
+    },
+    {
+      path: '/religiao',
+      name: 'religiao',
+      component: () => import('./views/Religiao.vue'),
+    },
   ],
 });

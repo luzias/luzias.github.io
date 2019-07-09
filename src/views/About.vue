@@ -8,7 +8,7 @@
     h1 Sobre o Luzias
     p Mesmo que todas as mulheres tenham características e diferenças socioculturais que tornam as experiências únicas, Luzias trata de um assunto que faz parte da vida reprodutiva feminina.
 
-    h2 O website transmídia Luzias nasceu com o objetivo de dar luz a um tema “obscuro”: o aborto. 
+    p O website transmídia Luzias nasceu com o objetivo de dar luz a um tema “obscuro”: o aborto. 
 
     p Idealizado por mulheres, esse é um trabalho experimental desenvolvido em 2019 na disciplina de Projeto Experimental II do curso de Jornalismo da Universidade Federal de Uberlândia, sob orientação da Profª Drª Vanessa Matos dos Santos e co-orientação da Profª Drª Mirna Tonus. 
 
@@ -72,6 +72,13 @@ export default {
   }
 }
 
+@media (max-width: 768px) {
+  .content {
+    width: unset;
+    margin: 2em 1em;
+  }  
+}
+
 h1 {
   font-family: "Bebas Neue";
   color: #FA7A5A;
@@ -81,9 +88,6 @@ h1 {
 
 h2 {
   font-family: "Bebas Neue";
-  // color: #FA7A5A;
-  font-size: 32px;
-  border-left: 4px solid #FA7A5A;
   padding: 0 0.75em;
   margin-left: 8px;
 }

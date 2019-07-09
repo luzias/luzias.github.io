@@ -4,7 +4,6 @@
     .back 
       img.backicon(src="@/assets/img/back.svg")
       span Voltar
-  h1 Planejamento Familiar
   .content
     img.infografico(src="@/assets/img/planejamento_familiar.png")
 </template>
@@ -21,13 +20,9 @@ export default {
   text-align: center;
 }
 
-.back {
-  position: absolute;
-}
-
 .infografico {
   width: 100vw;
-  margin-top: 48px;
+  margin-top: 72px;
 }
 
 h1 {

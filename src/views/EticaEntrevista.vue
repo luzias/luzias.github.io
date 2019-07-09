@@ -79,6 +79,13 @@ export default {
   }
 }
 
+@media (max-width: 768px) {
+  .content {
+    width: unset;
+    margin: 2em 1em;
+  }  
+}
+
 .credits {
   text-align: center;
   font-size: 12px;

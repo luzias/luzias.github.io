@@ -1,10 +1,11 @@
 <template lang="pug">
 #home(:class="{ animating: animate }")
-  .instruction
+  .mobile(:class="{ hide: !animate }")
+  .instruction(:class="{ hide: !animate }")
       h2 Navegue pela imagem com o mouse
   .svg-container(:class="{ animating: animate }")
     img.home(src="@/assets/img/home.svg")
-    a(href="https://youtu.be/X0qT1QIfuQI ", target="_blank")
+    router-link(to="/religiao")
       img.igreja(src="@/assets/img/igreja.svg")
     img.hospital(src="@/assets/img/hospital.svg")
     router-link(to="/depoimentos")
@@ -15,11 +16,11 @@
       img.lady-child(src="@/assets/img/lady_child.svg")
     router-link(to="/aborto-no-mundo")
       img.mapa(src="@/assets/img/mapa.svg")
-    a(href="https://youtu.be/0sC_uAUYYC4", target="_blank")
+    router-link(to="/legislacao")
       img.legislacao(src="@/assets/img/man_suit_coffee.svg")
     router-link(to="/quem-somos")
       img.quemsomos(src="@/assets/img/quem_somos.svg")
-    a(href="https://soundcloud.com/luziaspodcast/e-possivel-discutir-o-aborto-sem-falar-de-genero", target="_blank")
+    router-link(to="/aborto-e-papeis-de-genero")
       img.headphones(src="@/assets/img/man_headphone.svg")
     a(href="https://facebook.com/luziasdoc", target="_blank")
       img.facebook(src="@/assets/img/woman_holding_fb.svg")
@@ -63,6 +64,8 @@ export default {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+  width: 100%;
+  text-align:center;
 }
 
 .svg-container {
@@ -73,6 +76,10 @@ export default {
   &.animating {
     opacity: 0;
   }
+}
+
+.hide {
+  display: none;
 }
 
 .home {
@@ -248,4 +255,13 @@ export default {
       filter: drop-shadow(0 2px 8px rgba(0,0,0,0.25));
     }
 }
+
+@media (max-width: 768px) {
+  .mobile {
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+  }
+}
+
 </style>
